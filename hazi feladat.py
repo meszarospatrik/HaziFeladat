@@ -42,4 +42,13 @@ def haromszog():
         print("Nem kepezhetik!")
 
 
+def prim(n):
+    prim=True
+    if n==1:
+        prim=False
 
+    for i in range(2,int(mt.sqrt(n))+1):
+        if n%i==0:
+            prim = False
+            break
+    return prim
