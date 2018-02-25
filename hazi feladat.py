@@ -1,6 +1,6 @@
 import math as mt
 
-def csere(a,b):
+def feladat_1(a,b):
     a=a+b
     b=a-b
     a=a-b
@@ -9,9 +9,17 @@ def csere(a,b):
 
 
 
+def feladat_2():
+    a=int(input("Adj meg egy egész számot:"))
+    b=int(input("Adj meg még egy egész számot:"))
+    c=int(input("Adj meg egy harmadik egész számot:"))
+    lista=[a,b,c]
+    lista.sort()
+    print(lista)
 
 
-def fuggveny(x):
+
+def feladat_3(x):
     if x>-2 and x<2:
         return 2*x
     elif x>=0 and x<2:
@@ -23,7 +31,8 @@ def fuggveny(x):
         return
 
 
-def haromszog():
+
+def feladat_6():
     while True:
         a=float(input("A haromszog oldalai:"))
         b=float(input("A haromszog oldalai:"))
@@ -42,7 +51,20 @@ def haromszog():
         print("Nem kepezhetik!")
 
 
-def prim(n):
+
+
+def feladat_7(a,b,n):
+    k=(a+b)*2
+    if k==n:
+        return print("Pont elég")
+    elif k<n:
+        return n-k
+    elif k>n:
+        return k-n
+
+
+
+def feladat_19(n):
     prim=True
     if n==1:
         prim=False
