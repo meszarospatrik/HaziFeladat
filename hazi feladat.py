@@ -5,8 +5,6 @@ def feladat_1(a,b):
     b=a-b
     a=a-b
 
-    print(a,b)
-
 
 
 def feladat_2():
@@ -50,6 +48,8 @@ def feladat_5(a,b,c,d):
         c=d-c
         d=d-c
         print(a,b,c,d)
+
+
 
 
 
@@ -101,6 +101,17 @@ def feladat_8(x,a,b,c,d):
         return 4
 
 
+def feladat_9(a,b,c):
+    d=b*b-(4*a*c)
+    if d>0:
+        e=math.sqrt(d)
+        k1=float(-b+e)/(2*a)
+        k2=float(-b-e)/(2*a)
+        print("A gyökök:" ,k1,k2)
+    else:
+        print("Komplex gyökök")
+
+
 
 
 def feladat_10(ev1,ev2):
@@ -110,7 +121,7 @@ def feladat_10(ev1,ev2):
             db+=1
         elif i%100==0:
             return 0
-    print(db)
+    return db
 
 
 
@@ -196,6 +207,22 @@ def feladat_14():
         print("Nem megfelelő formátum.")
 
 
+
+
+def feladat_15(a,b):
+
+    hanyados=0
+    while a>=b:
+        hanyados=+1
+        a=a-b
+
+    print(hanyados)
+
+
+
+
+
+
 def feladat_16(a,b):
     while True:
         r=a%b
@@ -218,6 +245,17 @@ def feladat_17(n):
 
 
 
+def feladat_18(a,b):
+    x=a
+    y=b
+    p=0
+    while x>0:
+        if x%2!=0:
+            p=p+y
+        x=x/2
+        y=y+y
+        break
+    return p
 
 
 
@@ -251,6 +289,43 @@ def feladat_20(n):
 
 
 
+def feladat_21(n):
+    d=0
+    ujszam=0
+    while (n>0):
+        d=n%10
+        n=int(n/10)
+        ujszam=ujszam*10+d
+
+    return (ujszam)
+
+
+
+def feladat_22(x,n):
+    eredmeny=x**n
+    return eredmeny
+
+
+
+
+
+
+def feladat_23(n):
+
+    szam=0
+    for i in range(1,n):
+        if(n%i)==0:
+            szam=szam+i
+    if szam==n:
+        return "Tökéletes szám"
+    else:
+        return "Nem tökéletes"
+
+
+
+
+
+
 
 def feladat_25():
     x=int(input("Ország lakosainak a száma:"))
@@ -263,6 +338,15 @@ def feladat_25():
         print("Az ország átlagos népsűrűségű.")
     else:
         print("Az ország sűrűn lakott.")
+
+
+
+def feladat_29(n):
+    szam=1
+    for i in range(n):
+        szam=szam*(i+1)
+    return szam
+
 
 
 
@@ -280,3 +364,68 @@ def feladat_30():
 
     print(nap)
 
+
+
+
+def feladat_31(n):
+    osztok = []
+    for i in range(1, int(math.sqrt(n) + 1)):
+        if n % i == 0:
+            yield i
+            if i*i != n:
+                osztok.append(n/i)
+    for osztok1 in reversed(osztok):
+        yield osztok1
+
+
+
+def feladat_32(k):
+    n1=int(input("Adjon meg egy számot."))
+    n2=int(input("Adjon meg egy másik számot."))
+    lista=[]
+    for i in range(n1,n2):
+        if i%k==0:
+            lista.append(i)
+    return lista
+
+
+
+
+
+
+
+
+def main():
+    feladat_1(1,5)
+    feladat_2()
+    feladat_3(3)
+    feladat_4(10,30,40)
+    feladat_5(1,2,3,4)
+    feladat_6()
+    feladat_7(5,6,30)
+    feladat_8(2,5,4,6,8)
+    feladat_9(5,6,8)
+    feladat_10(2000,2010)
+    feladat_11()
+    feladat_12(100,60)
+    feladat_13()
+    feladat_14()
+    feladat_15(10,5)
+    feladat_16(5,7)
+    feladat_17(40)
+    feladat_18(10)
+    feladat_19(7)
+    feladat_20(5)
+    feladat_21(321)
+    feladat_22(5,7)
+    feladat_23(10)
+    feladat_25()
+    feladat_29(6)
+    feladat_30()
+    feladat_31(100)
+    feladat_32(2)
+    
+
+
+if __name__=="__main__":
+    main()
