@@ -67,10 +67,74 @@ def feladat_5(n):
         print(e)         
             
     
+    
+    def feladat_11():
+    try:
+        fajl=open("be.txt",mode="r")
+        hossz=0
+        sor=fajl.readline()
+        for sor in fajl:
+            sor=sor.strip()
+            hossz=hossz+1                       #Folyamatban van
+        if  sor==2
 
 
 
 
+def feladat_17():
+    try:
+        fajl1=open("be.txt",mode="r")
+        fajl2=open("ki.txt",mode="w")
+        sor=fajl1.readline()
+        for sor in fajl1:
+            if sor.islower():
+                fajl2.write("%d %d" % (sor))
+
+        fajl2.close()
+        fajl1.close()
+
+    except Exception as e:
+        print(e)
+        
+        
+        
+ 
+
+
+
+
+def feladat_16():
+    try:
+        fajl=open("be.txt", mode="r")
+        fajl2=open("ki.txt", mode="w")
+        sor=fajl.readline()
+        for sor in fajl:
+            if sor.isupper():
+                fajl2.write("%d %d" % (sor))
+
+        fajl2.close()
+        fajl.close()
+
+    except Exception as e:
+        print(e)
+        
+        
+        
+        
+        
+def feladat_15():
+    try:
+        fajl=open("be.txt", mode="r")
+        fajl2=opem("Ki.txt",mode="W")
+        sor=fajl.readline()
+        if sor=="":
+            sor.split()
+        fajl2.write("%d %d" % (sor))
+        fajl.close()
+        fajl2.close()
+
+    except Exception as e:
+        print(e)
 
 
 
