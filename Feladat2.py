@@ -124,7 +124,7 @@ def feladat_16():
         
 def feladat_15():
     try:
-        fajl=open("be.txt", mode="r")
+        fajl=open("be.txt", mode="r")                          #Megoldásra vár
         fajl2=opem("Ki.txt",mode="W")
         sor=fajl.readline()
         if sor=="":
@@ -138,17 +138,60 @@ def feladat_15():
 
 
 
+        
+def feladat_19():
+    try:
+        fajl=open("be.txt",mode="r")
+        legtobb=()
+
+        for sor in fajl:
+            sor=sor.strip()
+            legtobb=max(sor)
+
+        return legtobb
+        fajl.close()
+
+    except Exception as e:
+        print(e)
 
 
 
 
+def feladat_20():
+    try:
+        fajl=open("be.txt",mode="r")
+        sor=fajl.readline()
+        for sor in fajl:
+            sor=sor.strip()
+            x=sor.split(";")
+            legtobb=int(x[0])
+            leg=max(legtobb)
+
+        return leg
+        fajl,close()
+
+    except Exception as e:
+        print(e)
 
 
 
+        
+def feladat_21():
+    try:                                                        #módosítás alatt
+        fajl=open("be.txt",mode="r")
+        fajl1=open("ki.txt",mode="w")
+        sor=fajl.readline()
+        for sor in fajl:
+            x=sor.split(";")
+            pilota=int(x[0])
+            sum1=sum(pilota)
 
+        fajl1.write("%d %d" % ((pilota))
+        fajl.close()
+        fajl1.close()
 
-
-
+    except Exception as e:
+        print(e)
 
 
 
